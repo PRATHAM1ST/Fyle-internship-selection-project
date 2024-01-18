@@ -6,7 +6,7 @@ This project is located in the `Fyle` directory of the workspace.
 
 To run this project, you'll need to have a modern web browser installed on your computer. Here are the steps to run the project:
 
-1. Clone the repository to your local machine using `git clone <repository-url>`.
+1. Clone the repository to your local machine using `git clone https://github.com/PRATHAM1ST/Fyle-internship-selection-project`.
 2. Navigate to the `Fyle` directory in the cloned repository.
 3. Open the `index.html` file in your web browser.
 
