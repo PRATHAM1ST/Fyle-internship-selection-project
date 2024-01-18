@@ -2,6 +2,10 @@
 
 This project is located in the `Fyle` directory of the workspace.
 
+## Live Link
+
+You can view the live version of the project at [https://fyle-internship-selection-project.vercel.app/](https://fyle-internship-selection-project.vercel.app/)
+
 ## Running the Project
 
 To run this project, you'll need to have a modern web browser installed on your computer. Here are the steps to run the project:
