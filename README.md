@@ -2,6 +2,20 @@
 
 This project is located in the `Fyle` directory of the workspace.
 
+## Running the Project
+
+To run this project, you'll need to have a modern web browser installed on your computer. Here are the steps to run the project:
+
+1. Clone the repository to your local machine using `git clone <repository-url>`.
+2. Navigate to the `Fyle` directory in the cloned repository.
+3. Open the `index.html` file in your web browser.
+
+The web page should now be displayed in your browser, and you can interact with it as intended.
+
+## Executing the JavaScript Code
+
+The JavaScript code in `script.js` is executed automatically when the `index.html` file is loaded in the browser. Any functions that are called on page load will be executed immediately. Other functions, such as event handlers, will be executed when the corresponding events occur.
+
 ## Project Structure
 
 The project has the following structure:
