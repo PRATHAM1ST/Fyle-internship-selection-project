@@ -148,7 +148,7 @@
 #github-user-repos-list {
 	width: 100%;
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr, 100%));
+	grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
 	gap: 1rem;
 	padding: 0 var(--margin);
 }
@@ -251,9 +251,14 @@ button:disabled {
 		gap: 1rem;
 	}
 
-    #github-user-github-link {
-        justify-self: flex-start;
-    }
+	#github-user-github-link {
+		justify-self: flex-start;
+	}
+
+	#github-user-repos-list {
+		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr, 100%));
+	}
+	
 
 	.repo-topics span {
 		font-size: xx-small;
