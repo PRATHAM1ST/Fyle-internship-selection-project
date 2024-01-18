@@ -30,6 +30,7 @@ function GithubSearchUser(e) {
 			} else {
 				userData = data;
 				githubSearchUserForm.classList.remove("ideal");
+				githubSearchUserForm.reset();
 				GithubUserfound(data);
 			}
 		})
