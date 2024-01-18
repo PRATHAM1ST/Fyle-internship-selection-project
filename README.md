@@ -1,7 +1,5 @@
 # Fyle Project
 
-This project is located in the `Fyle` directory of the workspace.
-
 ## Live Link
 
 You can view the live version of the project at [https://fyle-internship-selection-project.vercel.app/](https://fyle-internship-selection-project.vercel.app/)
