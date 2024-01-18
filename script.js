@@ -21,13 +21,7 @@ function GithubSearchUser(e) {
 	e.preventDefault();
 	const username = document.getElementById("github-username").value;
 	const url = `https://api.github.com/users/${username}`;
-	fetch(url, {
-		method: "GET",
-		headers: {
-			Authorization:
-				"Bearer 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",
-		},
-	})
+	fetch(url)
 		.then((res) => res.json())
 		.then((data) => {
 			if (data.message == "Not Found") {
@@ -52,13 +46,7 @@ async function GetGithubUserRepos(username, page = 1) {
 		document.querySelector(".github-user-repo-list-per-page input").value
 	);
 	const url = `https://api.github.com/users/${username}/repos?per_page=${githubUserRepoListPerPage}&page=${page}`;
-	return await fetch(url, {
-		method: "GET",
-		headers: {
-			Authorization:
-				"Bearer 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",
-		},
-	})
+	return await fetch(url)
 		.then((res) => res.json())
 		.then((data) => data)
 		.catch((err) => alert(err));
