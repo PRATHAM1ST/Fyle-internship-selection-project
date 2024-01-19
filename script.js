@@ -31,6 +31,7 @@ function GithubSearchUser(e) {
 			if (data.message == "Not Found") {
 				githubSearchUserForm.classList.add("ideal");
 				alert("User not found");
+				window.location.reload();
 			} else {
 				userData = data;
 				githubSearchUserForm.classList.remove("ideal");
@@ -39,12 +40,6 @@ function GithubSearchUser(e) {
 			}
 		})
 		.catch((err) => {
-			const githubUserInfo = document.getElementById("github-user-info");
-			const githubUserRepos = document.getElementById(
-				"github-user-repos-list"
-			);
-			githubUserInfo.innerHTML = "";
-			githubUserRepos.innerHTML = "";
 			githubSearchUserForm.classList.add("ideal");
 			alert(err);
 		})
