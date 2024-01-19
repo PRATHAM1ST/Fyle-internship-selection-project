@@ -75,7 +75,7 @@
 	align-items: center;
 }
 
-.github-user-container {
+#github-user-container {
 	width: 100%;
 	overflow: hidden;
 	display: flex;
@@ -84,6 +84,15 @@
 	flex-direction: column;
 	margin-top: var(--margin);
 	gap: 1rem;
+}
+
+.github-user-container-loading{
+	display: none;
+}
+
+
+.github-user-container-loading.active{
+	display: block;
 }
 
 #github-user-info {
@@ -258,7 +267,11 @@ button:disabled {
 	#github-user-repos-list {
 		grid-template-columns: repeat(auto-fit, minmax(500px, 1fr, 100%));
 	}
-	
+
+	.repo-container {
+		padding: 1rem;
+		width: 100%;
+	}
 
 	.repo-topics span {
 		font-size: xx-small;

@@ -1,4 +1,7 @@
 const githubSearchUserForm = document.getElementById("github-search-user-form");
+const githubUserContainerLoading = document.querySelector(
+	".github-user-container-loading"
+);
 const githubUserRepoListPerPage = document.querySelector(
 	".github-user-repo-list-per-page"
 );
@@ -19,6 +22,7 @@ let userData;
 // It fetches the user data from the GitHub API and handles the response.
 function GithubSearchUser(e) {
 	e.preventDefault();
+	githubUserContainerLoading.classList.add("active");
 	const username = document.getElementById("github-username").value;
 	const url = `https://api.github.com/users/${username}`;
 	fetch(url)
@@ -35,8 +39,17 @@ function GithubSearchUser(e) {
 			}
 		})
 		.catch((err) => {
+			const githubUserInfo = document.getElementById("github-user-info");
+			const githubUserRepos = document.getElementById(
+				"github-user-repos-list"
+			);
+			githubUserInfo.innerHTML = "";
+			githubUserRepos.innerHTML = "";
 			githubSearchUserForm.classList.add("ideal");
 			alert(err);
+		})
+		.finally(() => {
+			githubUserContainerLoading.classList.remove("active");
 		});
 }
 
@@ -113,7 +126,8 @@ function GithubUserGithubLinkDisplay() {
 // It takes the username and page number as parameters.
 async function GithubUserReposDisplay(page) {
 	const githubUserRepos = document.getElementById("github-user-repos-list");
-	githubUserRepos.innerHTML = "<div class='loading'> <i class='fa-brands fa-github'></i> Loading... </div>";
+	githubUserRepos.innerHTML =
+		"<div class='loading'> <i class='fa-brands fa-github'></i> Loading... </div>";
 	const username = userData.login;
 	const userRepos = await GetGithubUserRepos(username, page);
 	if (userRepos.message == "Not Found") {
